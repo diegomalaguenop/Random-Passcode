@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@{
+    ViewBag.Title = "Random Code Generator";
+}
+
+<h2>Random passcode #@ViewBag.CodeCount</h2>
+
+
+<label for="randomCode">Código de acceso:</label>
+<input type="text" id="randomCode" value="@ViewBag.RandomCode" readonly>
+
+@Html.ActionLink("Generar otro código", "Index", "RandomCode")
